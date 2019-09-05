@@ -3,14 +3,10 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+// database module
+const db = require('./config/database');
+
 const app = express();
-
-const Sequelize = require('sequelize');
-const db = new Sequelize('simplebar', 'root', 'password', {
-  host: 'localhost',
-  dialect: 'mysql',
-
-});
 
 // test
 db.authenticate()
